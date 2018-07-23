@@ -3,35 +3,39 @@ version: 2
 jobs:
   
   build:
-    docker:
-      - image: circleci/node:6
+    machine: true
     steps:
       - checkout
+      - run: sleep 10
       - run: echo "hello!"
 
-  test:
-    docker:
-      - image: circleci/node:6
-    steps:
-      - run: echo "goodbye!"
+  # test:
+  #   docker:
+  #     - image: circleci/node:6
+  #   steps:
+  #     - run: sleep 10
+  #     - run: echo "goodbye!"
 
-  test2:
-    docker:
-      - image: circleci/node:6
-    steps:
-      - run: echo "goodbye!"
+  # test2:
+  #   docker:
+  #     - image: circleci/node:6
+  #   steps:
+  #     - run: sleep 10
+  #     - run: echo "goodbye!"
 
-  test3:
-    docker:
-      - image: circleci/node:6
-    steps:
-      - run: echo "goodbye!"
+  # test3:
+  #   docker:
+  #     - image: circleci/node:6
+  #   steps:
+  #     - run: sleep 10
+  #     - run: echo "goodbye!"
 
-  test4:
-    docker:
-      - image: circleci/node:6
-    steps:
-      - run: echo "goodbye!"
+  # test4:
+  #   docker:
+  #     - image: circleci/node:6
+  #   steps:
+  #     - run: sleep 10
+  #     - run: echo "goodbye!"
 
 #   download_artifacts:
 #     docker:
@@ -44,8 +48,8 @@ workflows:
   build_and_test:
     jobs:
       - build
-      - test
-      - test2
-      - test3
-      - test4
+      # - test
+      # - test2
+      # - test3
+      # - test4
 
