@@ -15,6 +15,24 @@ jobs:
     steps:
       - run: echo "goodbye!"
 
+  test2:
+    docker:
+      - image: circleci/node:6
+    steps:
+      - run: echo "goodbye!"
+
+  test3:
+    docker:
+      - image: circleci/node:6
+    steps:
+      - run: echo "goodbye!"
+
+  test4:
+    docker:
+      - image: circleci/node:6
+    steps:
+      - run: echo "goodbye!"
+
 #   download_artifacts:
 #     docker:
 #       - image: circleci/ruby:2.8
@@ -26,7 +44,8 @@ workflows:
   build_and_test:
     jobs:
       - build
-      - test:
-          requires:
-            - build
+      - test
+      - test2
+      - test3
+      - test4
 
